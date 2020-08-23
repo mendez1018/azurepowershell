@@ -1,0 +1,9 @@
+Delete all ResourceGroups 
+
+$groups = Get-AzResourceGroup
+
+foreach ($g in $groups)
+{
+Remove-AzResourceGroup -name $g.resourcegroupname -force
+}
+
